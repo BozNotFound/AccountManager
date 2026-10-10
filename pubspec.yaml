@@ -1,0 +1,26 @@
+name: ledger_app
+description: 纯本地记账 App（零权限、零联网）
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.7.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  sqflite: ^2.4.1
+  # 纯 Dart 的数据层接口：让 models/repositories 不依赖 Flutter，可在 Dart VM 下测试
+  sqflite_common: ^2.5.4
+  path: ^1.9.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  sqflite_common_ffi: ^2.3.4
+  # 进程内静态分析（当前环境无法启动分析服务子进程时使用 tool/analyze_project.dart）
+  analyzer: ^6.11.0
+
+flutter:
+  uses-material-design: true
